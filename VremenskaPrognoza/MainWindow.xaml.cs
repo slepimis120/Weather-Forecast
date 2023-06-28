@@ -126,10 +126,10 @@ namespace VremenskaPrognoza
                 {
                     string responseBody = await response.Content.ReadAsStringAsync();
                     WeatherData data = JsonSerializer.Deserialize<WeatherData>(responseBody);
+                    Console.Out.Write(data.forecast.forecastday[0]);
                     Days.Add(data.forecast.forecastday[0]);
                     Days.Add(data.forecast.forecastday[1]);
                     Days.Add(data.forecast.forecastday[2]);
-                    Days.Add(data.forecast.forecastday[3]);
                     
                     CityComboBox.Text = selectedItem;
                     
@@ -466,10 +466,10 @@ namespace VremenskaPrognoza
 
         private void UpdateDays()
         {
-            if (Days.Count() < 11)
+            if (Days.Count() < 10)
                 return;
 
-            for(int i = 1; i <= 11; i++)
+            for(int i = 1; i <= 10; i++)
             {
                 ForecastDay day = Days[i - 1];
                 TextBlock text_1 = FindName("Button_" + i.ToString() + "_Text_1") as TextBlock;

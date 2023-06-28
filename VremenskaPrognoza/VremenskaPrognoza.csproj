@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>113.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -200,6 +201,7 @@
     <None Remove="64x64\night\392.png" />
     <Resource Include="64x64\night\392.png" />
     <None Remove="64x64\night\395.png" />
+    <Content Include="113.ico" />
     <Resource Include="64x64\night\395.png" />
     <Resource Include="64x64\night\Thumbs.db" />
   </ItemGroup>
